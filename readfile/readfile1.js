@@ -14,7 +14,7 @@
 // Promise寫法
 const fs = require('fs')
 let p = new Promise((resolve, reject) => {
-  fs.readFile('text.txt','utf-8', (err, data) => {
+  fs.readFile('txxt.txt','utf-8', (err, data) => {
     if (err) {
       // 錯誤
       reject(err);
