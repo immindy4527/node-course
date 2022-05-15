@@ -14,9 +14,11 @@ let p = new Promise((resolve, reject) => {
 (async () => {
     // 用try包起來
     try {
-        let result = await getReadfilePromise('text.txt')
-        console.log('promise版本的readfile', result);
+        let Brush = await doWork('text.txt')
+        console.log('刷牙', Brush);
+        let Eat = await doWork('text.txt')
+        console.log('吃早餐', Eat);
     }catch(e) {
-        
+        console.log(err);
     }
 })
