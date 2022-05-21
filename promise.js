@@ -1,6 +1,7 @@
 // new Promise(executor);
 // // new 的時候要傳入 executor --> executor 也只是一個函式
 
+// 起手式 ：
 // function executor(resovle, reject){
 // resolve是成功，reject是失敗
 // }

@@ -1,16 +1,17 @@
 {
-  "name": "crawler",
+  "name": "crawler-mfee25",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MFee25",
+  "main": "crawler4.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mfee25"
+  ],
+  "author": "mindy",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "cowsay": "^1.5.0"
+    "mysql2": "^2.3.3"
   }
 }

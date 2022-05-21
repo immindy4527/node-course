@@ -19,6 +19,6 @@ let p = new Promise((resolve, reject) => {
         let Eat = await doWork('text.txt')
         console.log('吃早餐', Eat);
     }catch(e) {
-        console.log(err);
+        console.err(e);
     }
 })
