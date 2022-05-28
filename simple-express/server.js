@@ -6,7 +6,11 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const mysql = require('mysql2/promise');
+// 使用第三方套件 cors
+const cors = require('cors');
+app.use(cors());
+
+const mysql = require('mysql2');
 require('dotenv').config();
 
 let pool = mysql
@@ -14,8 +18,8 @@ let pool = mysql
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     user: process.env.DB_USER,
-    pwd: process.env.DB_PWD,
-    name: process.env.DB_NAME
+    password: process.env.DB_PWD,
+    database: process.env.DB_NAME
 })
 .promise();
 
@@ -186,6 +190,6 @@ app.get('/error', (req, res, next) => {
 //   res.status(500).send('Server Error: 請洽系統管理員');
 // });
 
-// app.listen(3001, () => {
-//   console.log('Server start at 3001');
-// });
+app.listen(3001, () => {
+  console.log('Server start at 3001');
+});
